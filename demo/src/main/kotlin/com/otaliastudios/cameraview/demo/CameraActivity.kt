@@ -2,7 +2,6 @@ package com.otaliastudios.cameraview.demo
 
 import android.animation.ValueAnimator
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.content.pm.PackageManager.PERMISSION_GRANTED
 import android.graphics.*
 import android.os.Bundle
@@ -18,6 +17,7 @@ import com.otaliastudios.cameraview.controls.Facing
 import com.otaliastudios.cameraview.controls.Mode
 import com.otaliastudios.cameraview.controls.Preview
 import com.otaliastudios.cameraview.filter.Filters
+import com.otaliastudios.cameraview.filter.NoFilter
 import com.otaliastudios.cameraview.frame.Frame
 import com.otaliastudios.cameraview.frame.FrameProcessor
 import java.io.ByteArrayOutputStream
@@ -37,7 +37,7 @@ class CameraActivity : AppCompatActivity(), View.OnClickListener, OptionView.Cal
     private var captureTime: Long = 0
 
     private var currentFilter = 0
-    private val allFilters = Filters.values()
+    private val allFilters = arrayOf(Filters.NONE, Filters.BEAUTY_FILTER, Filters.GRAYSCALE)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
