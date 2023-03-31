@@ -3,6 +3,7 @@ package com.otaliastudios.cameraview.filter;
 import androidx.annotation.NonNull;
 
 import com.otaliastudios.cameraview.filters.AutoFixFilter;
+import com.otaliastudios.cameraview.filters.BeautySkinFilter;
 import com.otaliastudios.cameraview.filters.BlackAndWhiteFilter;
 import com.otaliastudios.cameraview.filters.BrightnessFilter;
 import com.otaliastudios.cameraview.filters.ContrastFilter;
@@ -37,6 +38,8 @@ public enum Filters {
 
     /** @see AutoFixFilter */
     AUTO_FIX(AutoFixFilter.class),
+
+    BEAUTY_FILTER(BeautySkinFilter.class),
 
     /** @see BlackAndWhiteFilter */
     BLACK_AND_WHITE(BlackAndWhiteFilter.class),
